@@ -93,6 +93,48 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: "SourceSansPro-Bold";
+  src: url("../fonts/SourceSansPro-Bold.eot");
+  src: local("☺"), url("../fonts/SourceSansPro-Bold.woff") format("woff"), url("../fonts/SourceSansPro-Bold.ttf") format("truetype"), url("../fonts/SourceSansPro-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.img-logo {
+  padding-left: 20px;
+}
+
+.list a {
+  font-size: 16px;
+  color: #fff;
+}
+.list li {
+  font-family: "Roboto-Medium";
+  padding-right: 46px;
+}
+
+.title {
+  color: #1f1f1f;
+  font-family: "SourceSansPro-Bold";
+}
+
+.text {
+  color: #838383;
+  font-family: "Roboto-Light";
+  line-height: 28px;
+}
+
 header {
   background: url("../img/background.png") top center no-repeat;
   background-size: cover;
@@ -127,15 +169,8 @@ header {
   align-items: center;
 }
 .navigation .navigation__row .navigation__list {
+  margin-right: 40px;
   display: flex;
-}
-.navigation .navigation__row .navigation__list a {
-  font-size: 16px;
-  color: #fff;
-}
-.navigation .navigation__row .navigation__list li {
-  font-family: "Roboto-Medium";
-  padding-right: 46px;
 }
 .navigation .navigation__row .navigation__list li:last-child {
   padding-right: 0;
@@ -165,13 +200,186 @@ header {
   font-size: 28px;
   font-weight: 300;
   text-align: center;
-  padding-bottom: 107px;
+}
+@media (max-width: 1200px) {
+  .present .present__row .present__text .present__label {
+    font-size: 40px;
+  }
+  .present .present__row .present__text .present__sublabel {
+    font-size: 18px;
+  }
+}
+@media (max-width: 750px) {
+  .present .present__row .present__text .present__label {
+    max-width: 405px;
+    font-size: 30px;
+  }
+  .present .present__row .present__text .present__sublabel {
+    font-size: 14px;
+  }
 }
 .present .present__row .present__button {
-  padding: 107px;
+  padding: 107px 0 167px;
   font-family: "Roboto-Light";
 }
 .present .present__row .present__button .present__push {
   color: #fff;
   font-size: 14px;
+}
+
+.columns {
+  padding-bottom: 180px;
+}
+.columns .columns__row {
+  margin-top: -50px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 -20px;
+}
+@media (max-width: 750px) {
+  .columns .columns__row {
+    display: flex;
+    flex-direction: column;
+  }
+  .columns .columns__row .column:first-child {
+    margin-bottom: 30px;
+  }
+}
+.columns .columns__row .column {
+  margin: 0 20px;
+  padding: 75px 58px;
+  flex: 30%;
+  background-color: #202b30;
+}
+@media (max-width: 1200px) {
+  .columns .columns__row .column:last-child {
+    margin-top: 30px;
+    justify-content: center;
+  }
+  .columns .columns__row .column:last-child .column__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .columns .columns__row .column:last-child .column__icon {
+    display: flex;
+    justify-content: center;
+  }
+}
+.columns .columns__row .column .column__icon {
+  margin-bottom: 56px;
+}
+.columns .columns__row .column .column__body {
+  color: #fff;
+}
+.columns .columns__row .column .column__body .column__label {
+  font-family: "Roboto-Medium";
+  font-size: 20px;
+}
+.columns .columns__row .column .column__body .column__label:after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  margin: 30px 0;
+}
+.columns .columns__row .column .column__body .column__text {
+  font-family: "Roboto-Light";
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.description .description__row .description__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.description .description__row .description__body .description__label {
+  font-size: 60px;
+  font-family: "Roboto-Medium";
+  text-align: center;
+  margin-bottom: 47px;
+}
+.description .description__row .description__body .description__label span {
+  color: #fb505c;
+}
+.description .description__row .description__body .description__sublabel {
+  max-width: 615px;
+  font-family: "Roboto-Light";
+  color: #838383;
+  line-height: 28px;
+  font-size: 16px;
+  text-align: center;
+  padding-bottom: 128px;
+}
+@media (max-width: 1200px) {
+  .description .description__row .description__body .description__label {
+    font-size: 50px;
+    max-width: 515px;
+  }
+  .description .description__row .description__body .description__sublabel {
+    font-size: 14px;
+    max-width: 415px;
+  }
+}
+@media (max-width: 750px) {
+  .description .description__row .description__body .description__label {
+    font-size: 40px;
+    max-width: 415px;
+  }
+  .description .description__row .description__body .description__sublabel {
+    font-size: 12px;
+    max-width: 315px;
+  }
+}
+.description .description__row .description__columns .description__row {
+  padding-bottom: 105px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.description .description__row .description__columns .description__row .item__column {
+  flex: 33.333%;
+  padding-bottom: 70px;
+}
+@media (max-width: 1200px) {
+  .description .description__row .description__columns .description__row .item__column {
+    flex: 50%;
+  }
+}
+@media (max-width: 750px) {
+  .description .description__row .description__columns .description__row .item__column {
+    flex: 100%;
+  }
+}
+.description .description__row .description__columns .description__row .item__column .item__row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.description .description__row .description__columns .description__row .item__column .item__row .item__text {
+  text-align: center;
+  max-width: 300px;
+}
+
+.footer {
+  flex: 0 1 auto;
+}
+.footer .footer__body {
+  background-color: #202b30;
+}
+.footer .footer__body .footer__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+.footer .footer__body .footer__row .footer__list {
+  display: flex;
+  align-items: center;
+}
+.footer .footer__body .footer__row .footer__list li:last-child {
+  padding-right: 20px;
 }
