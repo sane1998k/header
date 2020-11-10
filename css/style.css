@@ -1,0 +1,177 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold.eot");
+  src: local("☺"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype"), url("../fonts/Roboto-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Light.eot");
+  src: local("☺"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto-Medium.eot");
+  src: local("☺"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype"), url("../fonts/Roboto-Medium.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+header {
+  background: url("../img/background.png") top center no-repeat;
+  background-size: cover;
+}
+
+.button {
+  width: 190px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fb414e;
+  padding: 20px 30px;
+}
+.button:hover {
+  background-color: #fb414e;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.navigation {
+  padding-top: 60px;
+}
+.navigation .navigation__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation .navigation__row .navigation__list {
+  display: flex;
+}
+.navigation .navigation__row .navigation__list a {
+  font-size: 16px;
+  color: #fff;
+}
+.navigation .navigation__row .navigation__list li {
+  font-family: "Roboto-Medium";
+  padding-right: 46px;
+}
+.navigation .navigation__row .navigation__list li:last-child {
+  padding-right: 0;
+}
+
+.present .present__row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.present .present__row .present__text {
+  color: #fff;
+}
+.present .present__row .present__text .present__label {
+  font-family: "Roboto-Bold";
+  padding-top: 138px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 65px;
+  max-width: 805px;
+  text-align: center;
+}
+.present .present__row .present__text .present__sublabel {
+  font-family: "Roboto-Light";
+  padding-top: 54px;
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 107px;
+}
+.present .present__row .present__button {
+  padding: 107px;
+  font-family: "Roboto-Light";
+}
+.present .present__row .present__button .present__push {
+  color: #fff;
+  font-size: 14px;
+}
